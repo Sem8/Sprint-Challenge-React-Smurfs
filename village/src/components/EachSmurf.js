@@ -14,7 +14,7 @@ return (
       <h3>{eachSmurf.name}</h3>
       <p>{eachSmurf.height} tall</p>
       <p>{eachSmurf.age} years old</p>
-      {/* <button onClick={(e => deleteSmurf(e, eachSmurf.id))}>Delete me I'm annoying</button> */}
+      <button onClick={(e => deleteSmurf(e, eachSmurf.id))}>Delete me I'm annoying</button>
     
   </div>
 )

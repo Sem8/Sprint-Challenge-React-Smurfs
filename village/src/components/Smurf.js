@@ -7,8 +7,9 @@ const Smurf = props => {
     <Link to={`/smurfs/${props.id}`}>   
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
-      <p>{props.age} smurf years old</p>
+      <p>{props.age} years old</p>
       <button onClick={(e => props.deleteSmurf(e, props.id))}>Delete Me I'm annoying</button>
+      <button onClick={(e => props.setUpdateForm(e, props))}>Update smurf info</button>
       </Link>
     </div>
     

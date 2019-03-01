@@ -19,6 +19,7 @@ class Smurfs extends Component {
                   height={smurf.height}
                   key={smurf.id}
                   deleteSmurf={this.props.deleteSmurf}
+                  setUpdateForm={this.props.setUpdateForm}
                 />
               );
             })}
