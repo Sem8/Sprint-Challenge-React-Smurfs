@@ -1,3 +1,70 @@
 .App {
   text-align: center;
 }
+
+.SmurfsList {
+  width: 800px;
+  margin: 0 auto;  
+}
+
+.SmurfsList ul {
+  display: flex;
+  border: 3px dotted cadetblue;
+  flex-flow: wrap;
+  margin: 0 auto
+}
+.Smurfs {
+  padding: 20px;
+}
+
+.Smurf {
+  background: aquamarine;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.homeBtn {
+  background: aquamarine;
+  border: none;
+  font-size: 20px;
+  border-radius: 50px;
+  margin: 10px 10px;
+  padding: 15px 20px;
+  color: midnightblue;
+}
+
+.formBtn {
+  background: aquamarine;
+  border: none;
+  font-size: 20px;
+  border-radius: 50px;
+  margin: 10px 10px;
+  padding: 15px 20px;
+  color: midnightblue;
+
+}
+
+.SmurfForm {  
+  margin: 0 auto;
+  background: midnightblue;
+}
+
+.smurfInput {
+  font-size: 20px;
+  background: aquamarine;
+  margin: 10px;
+  padding: 10px;
+}
+
+.addBtn {
+  background: aquamarine;
+  border: 2px solid midnightblue;
+  font-size: 20px;
+  border-radius: 50px;
+  margin: 10px 10px;
+  padding: 15px 20px;
+  color: midnightblue;
+
+}

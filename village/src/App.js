@@ -51,8 +51,8 @@ class App extends Component {
     return (
       <div className="App">
 
-        <NavLink to='/'><button>Home</button></NavLink>
-        <NavLink to='/smurf-form'><button>Form</button></NavLink>
+        <NavLink to='/'><button className='homeBtn'>Home</button></NavLink>
+        <NavLink to='/smurf-form'><button className='formBtn'>Form</button></NavLink>
 
         <Route path='/smurf-form' 
         render={ props => <SmurfForm {...props} addAnotherSmurf={this.addAnotherSmurf} />} 
