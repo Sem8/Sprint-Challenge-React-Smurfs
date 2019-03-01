@@ -32,9 +32,9 @@ class App extends Component {
     });
   };
 
-  addAnotherSmurf = (e, itemName, itemAge, itemHeight) => {
+  addAnotherSmurf = (e, anotherSmurf) => {
     e.preventDefault();
-    axios.post('http://localhost:3333/smurfs', itemName, itemAge, itemHeight)
+    axios.post('http://localhost:3333/smurfs', anotherSmurf)
     .then(res => {
       this.setState({
         smurfs: res.data
@@ -50,11 +50,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfForm addAnotherSmurf={this.addAnotherSmurf} />
-        <Smurfs smurfs={this.state.smurfs} />
+
+        <NavLink to='/'><button>Home</button></NavLink>
+        <NavLink to='/smurf-form'><button>Form</button></NavLink>
+
+        <Route path='/smurf-form' 
+        render={ props => <SmurfForm {...props} addAnotherSmurf={this.addAnotherSmurf} />} 
+        />        
+
+        <Route path='/' exact
+        render={ props => <Smurfs {...props} smurfs={this.state.smurfs} />} 
+        />
+        
       </div>
     );
   }
 }
 
 export default App;
+
+
