@@ -20,23 +20,37 @@ class App extends Component {
   // You'll need to make sure you have the right properties on state and pass them down to props.
 
   componentDidMount() {
-    console.log('CDM running');
+    // console.log('CDM running');
     axios.get('http://localhost:3333/smurfs')
     .then(res => {
       console.log(res);
       this.setState({ smurfs: res.data });
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       this.setState({ error: err });
     });
   };
+
+  addAnotherSmurf = (e, itemName, itemAge, itemHeight) => {
+    e.preventDefault();
+    axios.post('http://localhost:3333/smurfs', itemName, itemAge, itemHeight)
+    .then(res => {
+      this.setState({
+        smurfs: res.data
+      });
+      this.props.history.push('/smurfs');
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
 
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm addAnotherSmurf={this.addAnotherSmurf} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
