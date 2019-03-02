@@ -1,0 +1,18 @@
+ 1. Explain the differences between client-side routing and server-side routing.
+
+ 1 answer: Client side routing is when the route is handled internally by the JavaScript loaded on the page.
+ Client side routing is not Search Engine Optimization (SEO) friendly, takes longer to load for the first time, navigation speed is faster
+ because browser doesn't load other html files. Server side routing is when a new page is requested from the server by say an event like user
+ clicking on a link. Server side routing only delivers the requested page, initial load is faster, it's secure, utilizes
+ caching well but full page reload for any request is a con and always requires page reload.  
+
+
+2. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+2 answer: CRUD stands for Create, Read, Update, Deleter, respectively. Create in HTTP method corresponds to POST request, Read corresponds to GET method, 
+Update corresponds to PUT method and Delete corresponds to the delete method in HTTP protocol. 
+
+
+3. Mention three tools we can use to make AJAX requests.
+3 answer: 3 current popular libraraies for making AJAX requests are Fetch API, Axios library, and Request. 
+
